@@ -1,33 +1,13 @@
-import { statistics } from "../mock/statistics";
-import { incomes } from "../mock/incomes";
-import { outcomes } from "../mock/outcomes";
-
-import { ClientsTable } from "./ClientsTable";
-import { HeaderBar } from "./HeaderBar";
 import { Sidebar } from "./Sidebar";
-import { StatisticsContainer } from "./StatisticsContainer";
-import { TimeRangeSelector } from "./TimeRangeSelector";
-import { TransactionsContainer } from "./TransactionsContainer";
+import { Home } from "./Home";
 
-import { Box, Typography, Grid } from "@mui/material";
+import { Box } from "@mui/material";
 
 function Dashboard() {
   return (
     <Box sx={{ display: "flex", height: "100vh" }}>
       <Sidebar />
-      <Box component="main" sx={{ flexGrow: "1", overflowY: "auto" }}>
-        <HeaderBar />
-        <Box sx={{ p: 6, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <Typography variant="h4">Dashboard Home</Typography>
-          <TimeRangeSelector />
-        </Box>
-        <Grid container spacing={4} sx={{ pt: 2, pb: 8, px: 12 }}>
-          <StatisticsContainer statisticsData={statistics} />
-          <TransactionsContainer transactions={incomes} label="Incomes History" />
-          <TransactionsContainer transactions={outcomes} label="Outcomes History" />
-          <ClientsTable />
-        </Grid>
-      </Box>
+      <Home />
     </Box>
   );
 }
