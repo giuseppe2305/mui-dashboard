@@ -11,10 +11,10 @@ function TransactionHistory({ label }: Props) {
       <Card>
         <CardContent sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
           <Typography variant="h5">{label}</Typography>
-          <TransactionCard />
-          <TransactionCard />
-          <TransactionCard />
-          <TransactionCard />
+          <TransactionCard user="Giuseppe" ammount={20} />
+          <TransactionCard user="Giovanni" ammount={40} />
+          <TransactionCard user="Giuseppe" ammount={120} />
+          <TransactionCard user="Fabio" ammount={12} />
         </CardContent>
       </Card>
     </Grid>
