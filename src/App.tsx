@@ -3,15 +3,20 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
-import { Box } from "@mui/material";
+import { Box, CssBaseline, ThemeProvider, useTheme } from "@mui/material";
 import { Sidebar } from "./components/Sidebar";
 
 function App() {
+  const theme = useTheme();
+
   return (
-    <Box sx={{ display: "flex" }}>
-      <Sidebar />
-      <Box component="main" sx={{ flexGrow: "1", bgcolor: "red" }}></Box>
-    </Box>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Box sx={{ display: "flex", height: "100vh" }}>
+        <Sidebar />
+        <Box component="main" sx={{ flexGrow: "1", bgcolor: "red" }}></Box>
+      </Box>
+    </ThemeProvider>
   );
 }
 
