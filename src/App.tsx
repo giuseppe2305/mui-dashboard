@@ -3,16 +3,17 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
-import { Avatar, Box, CssBaseline, Grid, ThemeProvider, Typography, useTheme } from "@mui/material";
+import { Avatar, Badge, Box, CssBaseline, Grid, ThemeProvider, Typography, useTheme } from "@mui/material";
 
 import { Sidebar } from "./components/Sidebar";
-import { Notifications, Search } from "@mui/icons-material";
+import { Mail, Notifications, Search } from "@mui/icons-material";
 import { TransactionsContainer } from "./components/TransactionsContainer";
 import { incomes } from "./mock/incomes";
 import { outcomes } from "./mock/outcomes";
 import { StatisticsContainer } from "./components/StatisticsContainer";
 import { statistics } from "./mock/statistics";
 import { TimeRangeSelector } from "./components/TimeRangeSelector";
+import { ClientsTable } from "./components/ClientsTable";
 
 function App() {
   const theme = useTheme();
@@ -20,7 +21,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Box sx={{ display: "flex", height: "100vh" }}>
+      <Box sx={{ display: "flex", minHeight: "100vh" }}>
         <Sidebar />
         <Box component="main" sx={{ flexGrow: "1" }}>
           <Box
@@ -37,6 +38,9 @@ function App() {
               <Search />
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
+              <Badge badgeContent={4} color="primary">
+                <Mail />
+              </Badge>
               <Notifications />
               <Avatar>G</Avatar>
             </Box>
@@ -45,10 +49,11 @@ function App() {
             <Typography variant="h4">Dashboard Home</Typography>
             <TimeRangeSelector />
           </Box>
-          <Grid container spacing={4} sx={{ py: 2, px: 12 }}>
+          <Grid container spacing={4} sx={{ pt: 2, pb: 8, px: 12 }}>
             <StatisticsContainer statisticsData={statistics} />
             <TransactionsContainer transactions={incomes} label="Incomes History" />
             <TransactionsContainer transactions={outcomes} label="Outcomes History" />
+            <ClientsTable />
           </Grid>
         </Box>
       </Box>

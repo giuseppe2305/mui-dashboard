@@ -1,0 +1,60 @@
+import {
+  TableContainer,
+  Paper,
+  Table,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableBody,
+  Grid,
+  Typography,
+} from "@mui/material";
+import { clients } from "../mock/clients";
+
+function ClientsTable() {
+  return (
+    <Grid size={12}>
+      <Typography variant="h4" sx={{ py: 2 }}>
+        Clients Table
+      </Typography>
+      <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <TableHead>
+            <TableRow sx={{ backgroundColor: "primary.light" }}>
+              <TableCell sx={{ color: "primary.contrastText" }}>
+                <Typography>Clients</Typography>
+              </TableCell>
+              <TableCell sx={{ color: "primary.contrastText" }} align="right">
+                ID
+              </TableCell>
+              <TableCell sx={{ color: "primary.contrastText" }} align="right">
+                Name
+              </TableCell>
+              <TableCell sx={{ color: "primary.contrastText" }} align="right">
+                Email
+              </TableCell>
+              <TableCell sx={{ color: "primary.contrastText" }} align="right">
+                Orders
+              </TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {clients.map((client, i) => (
+              <TableRow sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
+                <TableCell component="th" scope="row">
+                  #{i + 1}
+                </TableCell>
+                <TableCell align="right">{client.id}</TableCell>
+                <TableCell align="right">{client.name}</TableCell>
+                <TableCell align="right">{client.email}</TableCell>
+                <TableCell align="right">{client.orders}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </Grid>
+  );
+}
+
+export { ClientsTable };
