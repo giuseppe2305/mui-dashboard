@@ -9,8 +9,6 @@ function Sidebar() {
   return (
     <Box
       sx={{
-        flexShrink: 0,
-        boxSizing: "border-box",
         backgroundColor: "primary.main",
         color: "primary.contrastText",
       }}

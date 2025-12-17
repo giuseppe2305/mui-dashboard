@@ -43,11 +43,6 @@ function App() {
           </Box>
           <Box sx={{ p: 6, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
             <Typography variant="h4">Dashboard Home</Typography>
-            {/* <ToggleButton value={"7days"}>
-              <ToggleButton value={"7days"}>7 days</ToggleButton>
-              <ToggleButton value={"30days"}>30 days</ToggleButton>
-              <ToggleButton value={"90days"}>90 days</ToggleButton>
-            </ToggleButton> */}
             <TimeRangeSelector />
           </Box>
           <Grid container spacing={4} sx={{ py: 2, px: 12 }}>
