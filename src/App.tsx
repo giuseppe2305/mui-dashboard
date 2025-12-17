@@ -21,9 +21,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Box sx={{ display: "flex", minHeight: "100vh" }}>
+      <Box sx={{ display: "flex", height: "100vh" }}>
         <Sidebar />
-        <Box component="main" sx={{ flexGrow: "1" }}>
+        <Box component="main" sx={{ flexGrow: "1", overflowY: "auto" }}>
           <Box
             sx={{
               py: 1,
