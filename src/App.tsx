@@ -44,7 +44,10 @@ function App() {
               <Avatar>G</Avatar>
             </Box>
           </Box>
-          <Container sx={{ p: 4, display: "flex", justifyContent: "space-between" }}>
+          <Typography sx={{ py: 4, px: 12 }} variant="h4">
+            Dashboard Home
+          </Typography>
+          <Container sx={{ p: 2, display: "flex", justifyContent: "space-between" }}>
             <Card sx={{ width: 200 }}>
               <CardContent sx={{ textAlign: "center" }}>
                 <Typography variant="h4">32</Typography>
