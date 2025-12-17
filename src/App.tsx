@@ -12,6 +12,7 @@ import {
   CardContent,
   Container,
   CssBaseline,
+  Grid,
   ThemeProvider,
   Typography,
   useTheme,
@@ -60,13 +61,57 @@ function App() {
               <Button>90 days</Button>
             </ButtonGroup>
           </Container>
-          <Container sx={{ p: 2, display: "flex", justifyContent: "space-between" }}>
-            <StatisticCard />
-            <StatisticCard />
-            <StatisticCard />
-            <StatisticCard />
-            <StatisticCard />
-          </Container>
+          <Grid container spacing={4} sx={{ py: 2, px: 12 }}>
+            <Grid size={2}>
+              <StatisticCard />
+            </Grid>
+            <Grid size={1}></Grid>
+            <Grid size={2}>
+              <StatisticCard />
+            </Grid>
+            <Grid size={2}></Grid>
+            <Grid size={2}>
+              <StatisticCard />
+            </Grid>
+            <Grid size={1}></Grid>
+            <Grid size={2}>
+              <StatisticCard />
+            </Grid>
+            <Grid size={6}>
+              <Card>
+                <CardContent sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+                  <Typography variant="h5">Transaction History</Typography>
+                  <Card>
+                    <CardContent sx={{ backgroundColor: "success.light", color: "success.contrastText" }}>
+                      <Container sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                        <Avatar>G</Avatar>
+                        <Typography sx={{ flexGrow: 1 }}>Giuseppe</Typography>
+                        <Box sx={{ backgroundColor: "success.main", p: 1 }}>431 EUR</Box>
+                      </Container>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardContent sx={{ backgroundColor: "success.light", color: "success.contrastText" }}>
+                      <Container sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                        <Avatar>G</Avatar>
+                        <Typography sx={{ flexGrow: 1 }}>Giuseppe</Typography>
+                        <Box sx={{ backgroundColor: "success.main", p: 1 }}>431 EUR</Box>
+                      </Container>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardContent sx={{ backgroundColor: "success.light", color: "success.contrastText" }}>
+                      <Container sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                        <Avatar>G</Avatar>
+                        <Typography sx={{ flexGrow: 1 }}>Giuseppe</Typography>
+                        <Box sx={{ backgroundColor: "success.main", p: 1 }}>431 EUR</Box>
+                      </Container>
+                    </CardContent>
+                  </Card>
+                </CardContent>
+              </Card>
+            </Grid>
+          </Grid>
         </Box>
       </Box>
     </ThemeProvider>
