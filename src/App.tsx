@@ -16,10 +16,11 @@ import {
 } from "@mui/material";
 import { Sidebar } from "./components/Sidebar";
 import { Notifications, Search } from "@mui/icons-material";
-import { StatisticCard } from "./components/StatisticCard";
 import { TransactionHistory } from "./components/TransactionHistory";
 import { incomes } from "./mock/incomes";
 import { outcomes } from "./mock/outcomes";
+import { StatisticsContainer } from "./components/StatisticsContainer";
+import { statistics } from "./mock/statistics";
 
 function App() {
   const theme = useTheme();
@@ -62,21 +63,7 @@ function App() {
             </ButtonGroup>
           </Box>
           <Grid container spacing={4} sx={{ py: 2, px: 12 }}>
-            <Grid size={2}>
-              <StatisticCard />
-            </Grid>
-            <Grid size={1}></Grid>
-            <Grid size={2}>
-              <StatisticCard />
-            </Grid>
-            <Grid size={2}></Grid>
-            <Grid size={2}>
-              <StatisticCard />
-            </Grid>
-            <Grid size={1}></Grid>
-            <Grid size={2}>
-              <StatisticCard />
-            </Grid>
+            <StatisticsContainer statisticsData={statistics} />
             <TransactionHistory transactions={incomes} label="Incomes History" />
             <TransactionHistory transactions={outcomes} label="Outcomes History" />
           </Grid>
