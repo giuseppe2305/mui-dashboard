@@ -75,8 +75,8 @@ function App() {
             <Grid size={2}>
               <StatisticCard />
             </Grid>
-            <TransactionHistory />
-            <TransactionHistory />
+            <TransactionHistory label="Incomes History" />
+            <TransactionHistory label="Outcomes History" />
           </Grid>
         </Box>
       </Box>
