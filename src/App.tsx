@@ -8,7 +8,6 @@ import {
   Box,
   Button,
   ButtonGroup,
-  Container,
   CssBaseline,
   Grid,
   ThemeProvider,
@@ -47,7 +46,7 @@ function App() {
               <Avatar>G</Avatar>
             </Box>
           </Box>
-          <Container sx={{ py: 4, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <Box sx={{ p: 6, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
             <Typography variant="h4">Dashboard Home</Typography>
             {/* <ToggleButton value={"7days"}>
               <ToggleButton value={"7days"}>7 days</ToggleButton>
@@ -59,7 +58,7 @@ function App() {
               <Button>30 days</Button>
               <Button>90 days</Button>
             </ButtonGroup>
-          </Container>
+          </Box>
           <Grid container spacing={4} sx={{ py: 2, px: 12 }}>
             <Grid size={2}>
               <StatisticCard />
@@ -76,6 +75,7 @@ function App() {
             <Grid size={2}>
               <StatisticCard />
             </Grid>
+            <TransactionHistory />
             <TransactionHistory />
           </Grid>
         </Box>
