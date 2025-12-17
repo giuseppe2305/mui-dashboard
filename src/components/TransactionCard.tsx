@@ -1,11 +1,7 @@
 import { Card, CardContent, Container, Avatar, Typography, Box } from "@mui/material";
+import type { TransactionData } from "../types/TransactionData";
 
-interface Props {
-  user: string;
-  ammount: number;
-}
-
-function TransactionCard({ user, ammount }: Props) {
+function TransactionCard({ user, ammount }: TransactionData) {
   return (
     <Card>
       <CardContent

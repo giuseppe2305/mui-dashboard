@@ -1,20 +1,21 @@
 import { Card, CardContent, Grid, Typography } from "@mui/material";
 import { TransactionCard } from "./TransactionCard";
+import type { TransactionData } from "../types/TransactionData";
 
 interface Props {
   label: string;
+  transactions: TransactionData[];
 }
 
-function TransactionHistory({ label }: Props) {
+function TransactionHistory({ label, transactions }: Props) {
   return (
     <Grid size={6}>
       <Card>
         <CardContent sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
           <Typography variant="h5">{label}</Typography>
-          <TransactionCard user="Giuseppe" ammount={20} />
-          <TransactionCard user="Giovanni" ammount={40} />
-          <TransactionCard user="Giuseppe" ammount={120} />
-          <TransactionCard user="Fabio" ammount={12} />
+          {transactions.map((el) => (
+            <TransactionCard ammount={el.ammount} user={el.user} key={el.id} id={el.id}></TransactionCard>
+          ))}
         </CardContent>
       </Card>
     </Grid>

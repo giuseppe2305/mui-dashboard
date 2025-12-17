@@ -18,6 +18,8 @@ import { Sidebar } from "./components/Sidebar";
 import { Notifications, Search } from "@mui/icons-material";
 import { StatisticCard } from "./components/StatisticCard";
 import { TransactionHistory } from "./components/TransactionHistory";
+import { incomes } from "./mock/incomes";
+import { outcomes } from "./mock/outcomes";
 
 function App() {
   const theme = useTheme();
@@ -75,8 +77,8 @@ function App() {
             <Grid size={2}>
               <StatisticCard />
             </Grid>
-            <TransactionHistory label="Incomes History" />
-            <TransactionHistory label="Outcomes History" />
+            <TransactionHistory transactions={incomes} label="Incomes History" />
+            <TransactionHistory transactions={outcomes} label="Outcomes History" />
           </Grid>
         </Box>
       </Box>
