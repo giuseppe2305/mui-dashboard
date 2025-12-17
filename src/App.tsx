@@ -6,6 +6,8 @@ import "@fontsource/roboto/700.css";
 import {
   Avatar,
   Box,
+  Button,
+  ButtonGroup,
   Card,
   CardContent,
   Container,
@@ -16,6 +18,7 @@ import {
 } from "@mui/material";
 import { Sidebar } from "./components/Sidebar";
 import { Notifications, Search } from "@mui/icons-material";
+import { StatisticCard } from "./components/StatisticCard";
 
 function App() {
   const theme = useTheme();
@@ -44,34 +47,25 @@ function App() {
               <Avatar>G</Avatar>
             </Box>
           </Box>
-          <Typography sx={{ py: 4, px: 12 }} variant="h4">
-            Dashboard Home
-          </Typography>
+          <Container sx={{ py: 4, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            <Typography variant="h4">Dashboard Home</Typography>
+            {/* <ToggleButton value={"7days"}>
+              <ToggleButton value={"7days"}>7 days</ToggleButton>
+              <ToggleButton value={"30days"}>30 days</ToggleButton>
+              <ToggleButton value={"90days"}>90 days</ToggleButton>
+            </ToggleButton> */}
+            <ButtonGroup>
+              <Button variant="contained">7 days</Button>
+              <Button>30 days</Button>
+              <Button>90 days</Button>
+            </ButtonGroup>
+          </Container>
           <Container sx={{ p: 2, display: "flex", justifyContent: "space-between" }}>
-            <Card sx={{ width: 200 }}>
-              <CardContent sx={{ textAlign: "center" }}>
-                <Typography variant="h4">32</Typography>
-                <Typography sx={{ textTransform: "uppercase", fontSize: 14 }}>Orders</Typography>
-              </CardContent>
-            </Card>
-            <Card sx={{ width: 200 }}>
-              <CardContent sx={{ textAlign: "center" }}>
-                <Typography variant="h4">32</Typography>
-                <Typography sx={{ textTransform: "uppercase", fontSize: 14 }}>Orders</Typography>
-              </CardContent>
-            </Card>
-            <Card sx={{ width: 200 }}>
-              <CardContent sx={{ textAlign: "center" }}>
-                <Typography variant="h4">32</Typography>
-                <Typography sx={{ textTransform: "uppercase", fontSize: 14 }}>Orders</Typography>
-              </CardContent>
-            </Card>
-            <Card sx={{ width: 200 }}>
-              <CardContent sx={{ textAlign: "center" }}>
-                <Typography variant="h4">32</Typography>
-                <Typography sx={{ textTransform: "uppercase", fontSize: 14 }}>Orders</Typography>
-              </CardContent>
-            </Card>
+            <StatisticCard />
+            <StatisticCard />
+            <StatisticCard />
+            <StatisticCard />
+            <StatisticCard />
           </Container>
         </Box>
       </Box>
