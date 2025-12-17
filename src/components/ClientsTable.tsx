@@ -10,6 +10,7 @@ import {
   Typography,
   Pagination,
   Stack,
+  Divider,
 } from "@mui/material";
 import { clients } from "../mock/clients";
 
@@ -54,8 +55,29 @@ function ClientsTable() {
             ))}
           </TableBody>
         </Table>
-        <Stack sx={{ width: "100%", alignItems: "end", p: 2 }}>
-          <Pagination count={10} />
+        <Divider />
+        <Stack
+          sx={{
+            width: "100%",
+            alignItems: "center",
+            justifyContent: "space-between",
+            flexDirection: "row",
+            py: 1,
+            px: 4,
+            backgroundColor: "primary.main",
+            color: "primary.contrastText",
+          }}
+        >
+          <Typography>Page 1 of 10</Typography>
+          <Pagination
+            sx={{
+              "& .MuiPaginationItem-root": {
+                color: "primary.contrastText", // normal text color
+              },
+            }}
+            color="secondary"
+            count={10}
+          />
         </Stack>
       </TableContainer>
     </Grid>
