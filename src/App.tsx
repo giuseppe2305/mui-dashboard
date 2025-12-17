@@ -16,7 +16,7 @@ import {
 } from "@mui/material";
 import { Sidebar } from "./components/Sidebar";
 import { Notifications, Search } from "@mui/icons-material";
-import { TransactionHistory } from "./components/TransactionHistory";
+import { TransactionsContainer } from "./components/TransactionsContainer";
 import { incomes } from "./mock/incomes";
 import { outcomes } from "./mock/outcomes";
 import { StatisticsContainer } from "./components/StatisticsContainer";
@@ -64,8 +64,8 @@ function App() {
           </Box>
           <Grid container spacing={4} sx={{ py: 2, px: 12 }}>
             <StatisticsContainer statisticsData={statistics} />
-            <TransactionHistory transactions={incomes} label="Incomes History" />
-            <TransactionHistory transactions={outcomes} label="Outcomes History" />
+            <TransactionsContainer transactions={incomes} label="Incomes History" />
+            <TransactionsContainer transactions={outcomes} label="Outcomes History" />
           </Grid>
         </Box>
       </Box>

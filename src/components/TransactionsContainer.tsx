@@ -7,7 +7,7 @@ interface Props {
   transactions: TransactionData[];
 }
 
-function TransactionHistory({ label, transactions }: Props) {
+function TransactionsContainer({ label, transactions }: Props) {
   return (
     <Grid size={6}>
       <Card>
@@ -22,4 +22,4 @@ function TransactionHistory({ label, transactions }: Props) {
   );
 }
 
-export { TransactionHistory };
+export { TransactionsContainer };
