@@ -8,8 +8,6 @@ import {
   Box,
   Button,
   ButtonGroup,
-  Card,
-  CardContent,
   Container,
   CssBaseline,
   Grid,
@@ -20,6 +18,7 @@ import {
 import { Sidebar } from "./components/Sidebar";
 import { Notifications, Search } from "@mui/icons-material";
 import { StatisticCard } from "./components/StatisticCard";
+import { TransactionHistory } from "./components/TransactionHistory";
 
 function App() {
   const theme = useTheme();
@@ -77,40 +76,7 @@ function App() {
             <Grid size={2}>
               <StatisticCard />
             </Grid>
-            <Grid size={6}>
-              <Card>
-                <CardContent sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-                  <Typography variant="h5">Transaction History</Typography>
-                  <Card>
-                    <CardContent sx={{ backgroundColor: "success.light", color: "success.contrastText" }}>
-                      <Container sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-                        <Avatar>G</Avatar>
-                        <Typography sx={{ flexGrow: 1 }}>Giuseppe</Typography>
-                        <Box sx={{ backgroundColor: "success.main", p: 1 }}>431 EUR</Box>
-                      </Container>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardContent sx={{ backgroundColor: "success.light", color: "success.contrastText" }}>
-                      <Container sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-                        <Avatar>G</Avatar>
-                        <Typography sx={{ flexGrow: 1 }}>Giuseppe</Typography>
-                        <Box sx={{ backgroundColor: "success.main", p: 1 }}>431 EUR</Box>
-                      </Container>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardContent sx={{ backgroundColor: "success.light", color: "success.contrastText" }}>
-                      <Container sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-                        <Avatar>G</Avatar>
-                        <Typography sx={{ flexGrow: 1 }}>Giuseppe</Typography>
-                        <Box sx={{ backgroundColor: "success.main", p: 1 }}>431 EUR</Box>
-                      </Container>
-                    </CardContent>
-                  </Card>
-                </CardContent>
-              </Card>
-            </Grid>
+            <TransactionHistory />
           </Grid>
         </Box>
       </Box>
