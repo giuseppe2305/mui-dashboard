@@ -3,17 +3,8 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
-import {
-  Avatar,
-  Box,
-  Button,
-  ButtonGroup,
-  CssBaseline,
-  Grid,
-  ThemeProvider,
-  Typography,
-  useTheme,
-} from "@mui/material";
+import { Avatar, Box, CssBaseline, Grid, ThemeProvider, Typography, useTheme } from "@mui/material";
+
 import { Sidebar } from "./components/Sidebar";
 import { Notifications, Search } from "@mui/icons-material";
 import { TransactionsContainer } from "./components/TransactionsContainer";
@@ -21,6 +12,7 @@ import { incomes } from "./mock/incomes";
 import { outcomes } from "./mock/outcomes";
 import { StatisticsContainer } from "./components/StatisticsContainer";
 import { statistics } from "./mock/statistics";
+import { TimeRangeSelector } from "./components/TimeRangeSelector";
 
 function App() {
   const theme = useTheme();
@@ -56,11 +48,7 @@ function App() {
               <ToggleButton value={"30days"}>30 days</ToggleButton>
               <ToggleButton value={"90days"}>90 days</ToggleButton>
             </ToggleButton> */}
-            <ButtonGroup>
-              <Button variant="contained">7 days</Button>
-              <Button>30 days</Button>
-              <Button>90 days</Button>
-            </ButtonGroup>
+            <TimeRangeSelector />
           </Box>
           <Grid container spacing={4} sx={{ py: 2, px: 12 }}>
             <StatisticsContainer statisticsData={statistics} />
