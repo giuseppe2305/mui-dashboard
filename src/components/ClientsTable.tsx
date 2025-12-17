@@ -8,6 +8,8 @@ import {
   TableBody,
   Grid,
   Typography,
+  Pagination,
+  Stack,
 } from "@mui/material";
 import { clients } from "../mock/clients";
 
@@ -52,6 +54,9 @@ function ClientsTable() {
             ))}
           </TableBody>
         </Table>
+        <Stack sx={{ width: "100%", alignItems: "end", p: 2 }}>
+          <Pagination count={10} />
+        </Stack>
       </TableContainer>
     </Grid>
   );
