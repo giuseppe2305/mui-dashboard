@@ -17,7 +17,7 @@ function HeaderBar() {
         <Search />
       </Box>
       <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
-        <Badge badgeContent={4} color="success">
+        <Badge badgeContent={4} color="warning">
           <Mail />
         </Badge>
         <Notifications />
