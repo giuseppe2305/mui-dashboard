@@ -43,7 +43,7 @@ function ClientsTable() {
           </TableHead>
           <TableBody>
             {clients.map((client, i) => (
-              <TableRow sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
+              <TableRow key={client.id} sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
                 <TableCell component="th" scope="row">
                   #{i + 1}
                 </TableCell>
