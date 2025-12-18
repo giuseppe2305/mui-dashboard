@@ -5,7 +5,11 @@ function TransactionCard({ user, ammount }: TransactionData) {
   return (
     <Card>
       <CardContent
-        sx={{ backgroundColor: `${ammount < 0 ? "error.light" : "success.light"}`, color: "success.contrastText" }}
+        sx={{
+          backgroundColor: `${ammount < 0 ? "error.light" : "success.light"}`,
+          color: "success.contrastText",
+          "&:last-child": { px: 0, py: 1 },
+        }}
       >
         <Container sx={{ display: "flex", alignItems: "center", gap: 2 }}>
           <Avatar>G</Avatar>
