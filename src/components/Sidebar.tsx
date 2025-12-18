@@ -1,4 +1,4 @@
-import { Collapse, Grid, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from "@mui/material";
+import { Drawer, Grid, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from "@mui/material";
 
 import HomeIcon from "@mui/icons-material/Home";
 import ShowChart from "@mui/icons-material/ShowChart";
@@ -7,18 +7,24 @@ import Person from "@mui/icons-material/Person";
 
 import { ThemeSwitch } from "./ThemeSwitch";
 import { useSidebar } from "../contexts/useSidebar";
+import { SIDEBAR_WIDTH } from "../lib/constants";
 
 function Sidebar() {
   const { isOpen } = useSidebar();
 
   return (
-    <Collapse
-      in={isOpen}
-      orientation="horizontal"
+    <Drawer
       sx={{
-        backgroundColor: "primary.main",
-        color: "primary.contrastText",
+        width: SIDEBAR_WIDTH,
+        flexShrink: 0,
+        "& .MuiDrawer-paper": {
+          width: SIDEBAR_WIDTH,
+          boxSizing: "border-box",
+        },
       }}
+      variant="persistent"
+      anchor="left"
+      open={isOpen}
     >
       <Grid sx={{ py: 4, px: { xs: 1, md: 2, lg: 4 }, flexDirection: "column" }}>
         <Typography variant="h6" sx={{ textAlign: "center" }}>
@@ -62,7 +68,7 @@ function Sidebar() {
           </ListItem>
         </List>
       </Grid>
-    </Collapse>
+    </Drawer>
   );
 }
 

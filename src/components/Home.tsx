@@ -11,15 +11,18 @@ import { TransactionsContainer } from "./TransactionsContainer";
 import { Box, Typography, Grid, Stack, Container } from "@mui/material";
 import { EmailsDrawer } from "./EmailsDrawer";
 import { useState } from "react";
+import { useSidebar } from "../contexts/useSidebar";
+import { SIDEBAR_WIDTH } from "../lib/constants";
 
 function Home() {
   const [isEmailOpen, setIsEmailOpen] = useState(false);
+  const { isOpen: isSidebarOpen } = useSidebar();
 
   const closeEmail = () => setIsEmailOpen(false);
   const openEmail = () => setIsEmailOpen(true);
 
   return (
-    <Box component="main" sx={{ overflowY: "auto", pb: 6 }}>
+    <Box component="main" sx={{ overflowY: "auto", pb: 6, ml: `${isSidebarOpen ? "unset" : `-${SIDEBAR_WIDTH}px`}` }}>
       <HeaderBar openEmail={openEmail} />
       <EmailsDrawer isOpen={isEmailOpen} handleClose={closeEmail} />
       <Stack
