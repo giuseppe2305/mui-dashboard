@@ -1,3 +1,4 @@
+import { Email } from "@mui/icons-material";
 import { incomes } from "../mock/incomes";
 import { outcomes } from "../mock/outcomes";
 import { statistics } from "../mock/statistics";
@@ -9,11 +10,13 @@ import { TimeRangeSelector } from "./TimeRangeSelector";
 import { TransactionsContainer } from "./TransactionsContainer";
 
 import { Box, Typography, Grid, Stack, Container } from "@mui/material";
+import { EmailsDrawer } from "./EmailsDrawer";
 
 function Home() {
   return (
     <Box component="main" sx={{ flexGrow: "1", overflowY: "auto", pb: 6 }}>
       <HeaderBar />
+      <EmailsDrawer />
       <Stack
         sx={{
           p: 6,
