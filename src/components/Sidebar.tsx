@@ -4,6 +4,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import ShowChart from "@mui/icons-material/ShowChart";
 import Settings from "@mui/icons-material/Settings";
 import Person from "@mui/icons-material/Person";
+
 import { ThemeSwitch } from "./ThemeSwitch";
 
 function Sidebar() {
@@ -14,7 +15,7 @@ function Sidebar() {
         color: "primary.contrastText",
       }}
     >
-      <Grid sx={{ p: 4, flexDirection: "column" }}>
+      <Grid sx={{ py: 4, px: { xs: 1, md: 2, lg: 4 }, flexDirection: "column" }}>
         <Typography variant="h6" sx={{ textAlign: "center" }}>
           MUI Dashboard
         </Typography>
