@@ -1,8 +1,7 @@
-// src/theme.ts
 import { createTheme } from "@mui/material/styles";
 
 const shared = {
-  shape: { borderRadius: 10 },
+  shape: { borderRadius: 8 },
   typography: {
     fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
     h1: { fontWeight: 700, fontSize: "1.8rem" },
@@ -22,11 +21,7 @@ const shared = {
         root: { backgroundImage: "none" },
       },
     },
-    MuiCard: {
-      styleOverrides: {
-        root: { borderRadius: 12 },
-      },
-    },
+
     MuiFormLabel: {
       styleOverrides: {
         root: { fontWeight: 600 },
@@ -40,8 +35,8 @@ const theme = createTheme({
     light: {
       palette: {
         mode: "light",
-        primary: { main: "#0f62fe", contrastText: "#ffffff" }, // vivid blue
-        secondary: { main: "#00a676", contrastText: "#ffffff" }, // balanced green
+        primary: { main: "#0f62fe", contrastText: "#ffffff" },
+        secondary: { main: "#00a676", contrastText: "#ffffff" },
         background: { default: "#f5f7fb", paper: "#ffffff" },
         text: { primary: "#0b1b2b", secondary: "#415a6b" },
         divider: "rgba(11,27,43,0.08)",
@@ -50,8 +45,8 @@ const theme = createTheme({
     dark: {
       palette: {
         mode: "dark",
-        primary: { main: "#6ec6ff", contrastText: "#022b3a" }, // light blue for contrast
-        secondary: { main: "#7bffb2", contrastText: "#002b20" }, // soft green
+        primary: { main: "#6ec6ff", contrastText: "#022b3a" },
+        secondary: { main: "#7bffb2", contrastText: "#002b20" },
         background: { default: "#071022", paper: "#071a23" },
         text: { primary: "#e6f7ff", secondary: "#bcd9e9" },
         divider: "rgba(255,255,255,0.08)",
