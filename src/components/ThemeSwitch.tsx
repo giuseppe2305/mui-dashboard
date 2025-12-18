@@ -1,4 +1,4 @@
-import { useColorScheme, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Stack } from "@mui/material";
+import { useColorScheme, FormControl, InputLabel, Select, MenuItem } from "@mui/material";
 
 function ThemeSwitch() {
   const { mode, setMode } = useColorScheme();
@@ -6,33 +6,24 @@ function ThemeSwitch() {
     return null;
   }
   return (
-    <Stack
-      sx={{
-        width: "100%",
-        alignItems: "center",
-        justifyContent: "center",
-        bgcolor: "background.default",
-        color: "text.primary",
-        borderRadius: 1,
-        p: 3,
-        minHeight: "56px",
-      }}
-    >
-      <FormControl>
-        <FormLabel id="demo-theme-toggle">Theme</FormLabel>
-        <RadioGroup
-          aria-labelledby="demo-theme-toggle"
-          name="theme-toggle"
-          row
-          value={mode}
-          onChange={(event) => setMode(event.target.value as "system" | "light" | "dark")}
-        >
-          <FormControlLabel value="system" control={<Radio />} label="System" />
-          <FormControlLabel value="light" control={<Radio />} label="Light" />
-          <FormControlLabel value="dark" control={<Radio />} label="Dark" />
-        </RadioGroup>
-      </FormControl>
-    </Stack>
+    <FormControl variant="outlined" fullWidth sx={{ "& svg": { color: "primary.contrastText" } }}>
+      <InputLabel id="theme-select-label" sx={{ color: "primary.contrastText" }}>
+        Theme
+      </InputLabel>
+      <Select
+        labelId="theme-select-label"
+        id="theme-select"
+        value={mode}
+        label="Theme"
+        onChange={(event) => setMode(event.target.value as "system" | "light" | "dark")}
+        size="small"
+        sx={{ color: "primary.contrastText" }}
+      >
+        <MenuItem value="system">System</MenuItem>
+        <MenuItem value="light">Light</MenuItem>
+        <MenuItem value="dark">Dark</MenuItem>
+      </Select>
+    </FormControl>
   );
 }
 
