@@ -8,7 +8,7 @@ import { StatisticsContainer } from "./StatisticsContainer";
 import { TimeRangeSelector } from "./TimeRangeSelector";
 import { TransactionsContainer } from "./TransactionsContainer";
 
-import { Box, Typography, Grid, Stack } from "@mui/material";
+import { Box, Typography, Grid, Stack, Container } from "@mui/material";
 
 function Home() {
   return (
@@ -30,8 +30,10 @@ function Home() {
         <StatisticsContainer statisticsData={statistics} />
         <TransactionsContainer transactions={incomes} label="Incomes History" />
         <TransactionsContainer transactions={outcomes} label="Outcomes History" />
-        <ClientsTable />
       </Grid>
+      <Container>
+        <ClientsTable />
+      </Container>
     </Box>
   );
 }
