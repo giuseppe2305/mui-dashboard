@@ -1,11 +1,14 @@
 import { Mail, Notifications, Menu } from "@mui/icons-material";
 import { Box, Badge, Avatar, IconButton } from "@mui/material";
+import { useSidebar } from "../contexts/useSidebar";
 
 interface Props {
   openEmail: () => void;
 }
 
 function HeaderBar({ openEmail }: Props) {
+  const { toggleSidebar } = useSidebar();
+
   return (
     <Box
       sx={{
@@ -18,7 +21,9 @@ function HeaderBar({ openEmail }: Props) {
       }}
     >
       <Box sx={{ flexGrow: "1", display: "flex" }}>
-        <Menu />
+        <IconButton onClick={toggleSidebar}>
+          <Menu sx={{ color: "primary.contrastText" }} />
+        </IconButton>
       </Box>
       <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
         <IconButton onClick={openEmail}>
