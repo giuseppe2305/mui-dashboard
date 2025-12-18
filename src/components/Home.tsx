@@ -29,9 +29,11 @@ function Home() {
         overflowY: "auto",
         pb: 6,
         ml: `${isSidebarOpen ? "unset" : `-${SIDEBAR_WIDTH}px`}`,
-        transition: theme.transitions.create(["margin", "width"], {
-          easing: theme.transitions.easing.sharp,
-          duration: theme.transitions.duration.leavingScreen,
+        transition: theme.transitions.create("margin", {
+          easing: isSidebarOpen ? theme.transitions.easing.easeOut : theme.transitions.easing.sharp,
+          duration: isSidebarOpen
+            ? theme.transitions.duration.enteringScreen
+            : theme.transitions.duration.leavingScreen,
         }),
       }}
     >
