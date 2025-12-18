@@ -3,8 +3,7 @@ import type { ChildrenNode } from "../types/ChildrenNode";
 
 interface ContextValue {
   isOpen: boolean;
-  openSidebar: () => void;
-  closeSidebar: () => void;
+  toggleSidebar: () => void;
 }
 
 const SidebarContext = createContext<undefined | ContextValue>(undefined);
@@ -12,10 +11,9 @@ const SidebarContext = createContext<undefined | ContextValue>(undefined);
 function SidebarProvider({ children }: ChildrenNode) {
   const [isOpen, setIsOpen] = useState(true);
 
-  const openSidebar = () => setIsOpen(true);
-  const closeSidebar = () => setIsOpen(false);
+  const toggleSidebar = () => setIsOpen((isOpen) => !isOpen);
 
-  return <SidebarContext.Provider value={{ isOpen, openSidebar, closeSidebar }}>{children}</SidebarContext.Provider>;
+  return <SidebarContext.Provider value={{ isOpen, toggleSidebar }}>{children}</SidebarContext.Provider>;
 }
 
 export { SidebarContext, SidebarProvider };
