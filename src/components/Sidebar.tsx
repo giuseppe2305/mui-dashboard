@@ -17,9 +17,15 @@ function Sidebar() {
       sx={{
         width: SIDEBAR_WIDTH,
         flexShrink: 0,
+
         "& .MuiDrawer-paper": {
           width: SIDEBAR_WIDTH,
           boxSizing: "border-box",
+        },
+
+        "& .MuiPaper-root": {
+          backgroundColor: "primary.main",
+          color: "primary.contrastText",
         },
       }}
       variant="persistent"
