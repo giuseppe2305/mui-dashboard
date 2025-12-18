@@ -13,7 +13,7 @@ import { EmailsDrawer } from "./EmailsDrawer";
 import { useState } from "react";
 
 function Home() {
-  const [isEmailOpen, setIsEmailOpen] = useState(true);
+  const [isEmailOpen, setIsEmailOpen] = useState(false);
 
   const closeEmail = () => setIsEmailOpen(false);
   const openEmail = () => setIsEmailOpen(true);
