@@ -1,5 +1,6 @@
-import { Close, Email } from "@mui/icons-material";
-import { Drawer, Stack, Typography, Container, Card, Button, IconButton } from "@mui/material";
+import { Close, Email as EmailIcon } from "@mui/icons-material";
+import { Drawer, Stack, Typography, IconButton } from "@mui/material";
+import { Email } from "./Email";
 
 interface Props {
   isOpen: boolean;
@@ -14,20 +15,15 @@ function EmailsDrawer({ isOpen, handleClose }: Props) {
       </IconButton>
       <Stack sx={{ p: 4 }} gap={1} alignItems="center">
         <Stack direction="row" alignItems="center" gap={1}>
-          <Email />
+          <EmailIcon />
           <Typography variant="h5">Emails</Typography>
         </Stack>
         <Typography>You have 3 new emails</Typography>
-        <Container sx={{ mt: 2 }}>
-          <Card sx={{ px: 2, py: 1, display: "flex", alignItems: "center", minWidth: 500 }}>
-            <Stack sx={{ flexGrow: 1 }}>
-              <Typography variant="h6">Joe Doe</Typography>
-              <Typography>Hi, how are you?</Typography>
-            </Stack>
-            <Button>Mark as read</Button>
-            <Button color="error">Delete</Button>
-          </Card>
-        </Container>
+        <Stack gap={2} sx={{ mt: 2 }}>
+          <Email />
+          <Email />
+          <Email />
+        </Stack>
       </Stack>
     </Drawer>
   );
