@@ -9,7 +9,7 @@ interface Props {
 
 function StatisticCard({ data }: Props) {
   return (
-    <Card sx={{ width: CARD_WIDTH }}>
+    <Card sx={{ width: "100%", minWidth: CARD_WIDTH }}>
       <CardContent sx={{ textAlign: "center" }}>
         <Typography variant="h4">{data.value}</Typography>
         <Typography sx={{ textTransform: "uppercase", fontSize: 14 }}>{data.label}</Typography>
