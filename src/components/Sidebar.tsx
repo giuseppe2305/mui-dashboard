@@ -1,4 +1,4 @@
-import { Box, Grid, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from "@mui/material";
+import { Collapse, Grid, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from "@mui/material";
 
 import HomeIcon from "@mui/icons-material/Home";
 import ShowChart from "@mui/icons-material/ShowChart";
@@ -6,10 +6,15 @@ import Settings from "@mui/icons-material/Settings";
 import Person from "@mui/icons-material/Person";
 
 import { ThemeSwitch } from "./ThemeSwitch";
+import { useSidebar } from "../contexts/useSidebar";
 
 function Sidebar() {
+  const { isOpen } = useSidebar();
+
   return (
-    <Box
+    <Collapse
+      in={isOpen}
+      orientation="horizontal"
       sx={{
         backgroundColor: "primary.main",
         color: "primary.contrastText",
@@ -57,7 +62,7 @@ function Sidebar() {
           </ListItem>
         </List>
       </Grid>
-    </Box>
+    </Collapse>
   );
 }
 
