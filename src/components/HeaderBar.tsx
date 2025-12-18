@@ -1,7 +1,11 @@
 import { Search, Mail, Notifications } from "@mui/icons-material";
-import { Box, Badge, Avatar } from "@mui/material";
+import { Box, Badge, Avatar, IconButton } from "@mui/material";
 
-function HeaderBar() {
+interface Props {
+  openEmail: () => void;
+}
+
+function HeaderBar({ openEmail }: Props) {
   return (
     <Box
       sx={{
@@ -17,9 +21,11 @@ function HeaderBar() {
         <Search />
       </Box>
       <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
-        <Badge badgeContent={4} color="warning">
-          <Mail />
-        </Badge>
+        <IconButton onClick={openEmail}>
+          <Badge badgeContent={4} color="warning">
+            <Mail sx={{ color: "primary.contrastText" }} />
+          </Badge>
+        </IconButton>
         <Notifications />
         <Avatar>G</Avatar>
       </Box>

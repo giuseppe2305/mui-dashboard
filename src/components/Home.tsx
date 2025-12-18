@@ -1,4 +1,3 @@
-import { Email } from "@mui/icons-material";
 import { incomes } from "../mock/incomes";
 import { outcomes } from "../mock/outcomes";
 import { statistics } from "../mock/statistics";
@@ -11,12 +10,18 @@ import { TransactionsContainer } from "./TransactionsContainer";
 
 import { Box, Typography, Grid, Stack, Container } from "@mui/material";
 import { EmailsDrawer } from "./EmailsDrawer";
+import { useState } from "react";
 
 function Home() {
+  const [isEmailOpen, setIsEmailOpen] = useState(true);
+
+  const closeEmail = () => setIsEmailOpen(false);
+  const openEmail = () => setIsEmailOpen(true);
+
   return (
     <Box component="main" sx={{ flexGrow: "1", overflowY: "auto", pb: 6 }}>
-      <HeaderBar />
-      <EmailsDrawer />
+      <HeaderBar openEmail={openEmail} />
+      <EmailsDrawer isOpen={isEmailOpen} handleClose={closeEmail} />
       <Stack
         sx={{
           p: 6,
