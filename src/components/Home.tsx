@@ -12,7 +12,7 @@ import { Box, Typography, Grid, Stack, Container } from "@mui/material";
 
 function Home() {
   return (
-    <Box component="main" sx={{ flexGrow: "1", overflowY: "auto" }}>
+    <Box component="main" sx={{ flexGrow: "1", overflowY: "auto", pb: 6 }}>
       <HeaderBar />
       <Stack
         sx={{
