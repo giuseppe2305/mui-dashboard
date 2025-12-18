@@ -5,7 +5,7 @@ import "@fontsource/roboto/700.css";
 
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { Dashboard } from "./components/Dashboard";
-import theme from "./theme";
+import theme from "./lib/theme";
 
 function App() {
   return (
