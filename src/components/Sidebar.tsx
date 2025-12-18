@@ -4,6 +4,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import ShowChart from "@mui/icons-material/ShowChart";
 import Settings from "@mui/icons-material/Settings";
 import Person from "@mui/icons-material/Person";
+import { ThemeSwitch } from "./ThemeSwitch";
 
 function Sidebar() {
   return (
@@ -49,6 +50,9 @@ function Sidebar() {
               </ListItemIcon>
               <ListItemText primary="Account" />
             </ListItemButton>
+          </ListItem>
+          <ListItem sx={{ mt: 6 }}>
+            <ThemeSwitch />
           </ListItem>
         </List>
       </Grid>
