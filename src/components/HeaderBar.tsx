@@ -1,4 +1,4 @@
-import { Search, Mail, Notifications } from "@mui/icons-material";
+import { Mail, Notifications, Menu } from "@mui/icons-material";
 import { Box, Badge, Avatar, IconButton } from "@mui/material";
 
 interface Props {
@@ -18,7 +18,7 @@ function HeaderBar({ openEmail }: Props) {
       }}
     >
       <Box sx={{ flexGrow: "1", display: "flex" }}>
-        <Search />
+        <Menu />
       </Box>
       <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
         <IconButton onClick={openEmail}>
