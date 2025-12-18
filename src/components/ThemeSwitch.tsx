@@ -6,7 +6,14 @@ function ThemeSwitch() {
     return null;
   }
   return (
-    <FormControl variant="outlined" fullWidth sx={{ "& svg": { color: "primary.contrastText" } }}>
+    <FormControl
+      variant="outlined"
+      fullWidth
+      sx={{
+        "& svg": { color: "primary.contrastText" },
+        "& .MuiOutlinedInput-notchedOutline": { borderColor: "primary.contrastText" },
+      }}
+    >
       <InputLabel id="theme-select-label" sx={{ color: "primary.contrastText" }}>
         Theme
       </InputLabel>
@@ -17,7 +24,10 @@ function ThemeSwitch() {
         label="Theme"
         onChange={(event) => setMode(event.target.value as "system" | "light" | "dark")}
         size="small"
-        sx={{ color: "primary.contrastText" }}
+        sx={{
+          color: "primary.contrastText",
+          "&:hover .MuiOutlinedInput-notchedOutline": { borderColor: "primary.contrastText" },
+        }}
       >
         <MenuItem value="system">System</MenuItem>
         <MenuItem value="light">Light</MenuItem>
