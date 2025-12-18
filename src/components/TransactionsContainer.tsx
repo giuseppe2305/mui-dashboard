@@ -9,7 +9,7 @@ interface Props {
 
 function TransactionsContainer({ label, transactions }: Props) {
   return (
-    <Grid size={6}>
+    <Grid size={{ lg: 6 }}>
       <Card>
         <CardContent sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
           <Typography variant="h5">{label}</Typography>
