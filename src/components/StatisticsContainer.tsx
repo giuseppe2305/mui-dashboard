@@ -10,7 +10,7 @@ function StatisticsContainer({ statisticsData }: Props) {
   return (
     <>
       {statisticsData.map((el) => (
-        <Grid key={el.id} size={2}>
+        <Grid key={el.id} size={{ lg: 4, xl: 2 }}>
           <StatisticCard data={el} />
         </Grid>
       ))}

@@ -18,7 +18,7 @@ function Home() {
         <Typography variant="h4">Dashboard Home</Typography>
         <TimeRangeSelector />
       </Box>
-      <Grid container spacing={4} sx={{ pt: 2, pb: 8, px: 12 }}>
+      <Grid container spacing={4} sx={{ pt: 2, pb: 8, px: 12, justifyContent: "center" }}>
         <StatisticsContainer statisticsData={statistics} />
         <TransactionsContainer transactions={incomes} label="Incomes History" />
         <TransactionsContainer transactions={outcomes} label="Outcomes History" />

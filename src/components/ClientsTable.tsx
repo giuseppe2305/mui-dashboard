@@ -72,7 +72,7 @@ function ClientsTable() {
           <Pagination
             sx={{
               "& .MuiPaginationItem-root": {
-                color: "primary.contrastText", // normal text color
+                color: "primary.contrastText",
               },
             }}
             color="primary"
