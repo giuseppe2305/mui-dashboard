@@ -1,4 +1,4 @@
-import { useColorScheme, Box, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from "@mui/material";
+import { useColorScheme, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Stack } from "@mui/material";
 
 function ThemeSwitch() {
   const { mode, setMode } = useColorScheme();
@@ -6,9 +6,8 @@ function ThemeSwitch() {
     return null;
   }
   return (
-    <Box
+    <Stack
       sx={{
-        display: "flex",
         width: "100%",
         alignItems: "center",
         justifyContent: "center",
@@ -33,7 +32,7 @@ function ThemeSwitch() {
           <FormControlLabel value="dark" control={<Radio />} label="Dark" />
         </RadioGroup>
       </FormControl>
-    </Box>
+    </Stack>
   );
 }
 

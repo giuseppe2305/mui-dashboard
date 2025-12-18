@@ -23,7 +23,7 @@ function ClientsTable() {
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
-            <TableRow sx={{ backgroundColor: "primary.light" }}>
+            <TableRow sx={{ backgroundColor: "primary.main" }}>
               <TableCell sx={{ color: "primary.contrastText" }}>
                 <Typography>Clients</Typography>
               </TableCell>
@@ -64,7 +64,7 @@ function ClientsTable() {
             flexDirection: "row",
             py: 1,
             px: 4,
-            backgroundColor: "primary.main",
+            backgroundColor: "primary.light",
             color: "primary.contrastText",
           }}
         >
@@ -75,7 +75,7 @@ function ClientsTable() {
                 color: "primary.contrastText", // normal text color
               },
             }}
-            color="secondary"
+            color="primary"
             count={10}
           />
         </Stack>

@@ -7,7 +7,7 @@ function HeaderBar() {
       sx={{
         py: 1,
         px: 4,
-        backgroundColor: "primary.light",
+        backgroundColor: "primary.main",
         color: "primary.contrastText",
         display: "flex",
         alignItems: "center",
