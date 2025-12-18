@@ -19,7 +19,7 @@ function Home() {
   const openEmail = () => setIsEmailOpen(true);
 
   return (
-    <Box component="main" sx={{ flexGrow: "1", overflowY: "auto", pb: 6 }}>
+    <Box component="main" sx={{ flexGrow: 1, overflowY: "auto", pb: 6 }}>
       <HeaderBar openEmail={openEmail} />
       <EmailsDrawer isOpen={isEmailOpen} handleClose={closeEmail} />
       <Stack

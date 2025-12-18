@@ -1,17 +1,17 @@
 import { Sidebar } from "./Sidebar";
 import { Home } from "./Home";
 
-import { Box } from "@mui/material";
+import { Stack } from "@mui/material";
 import { SidebarProvider } from "../contexts/SidebarContext";
 
 function Dashboard() {
   return (
-    <Box sx={{ display: "flex", height: "100vh" }}>
-      <SidebarProvider>
+    <SidebarProvider>
+      <Stack direction="row" sx={{ height: "100vh" }}>
         <Sidebar />
         <Home />
-      </SidebarProvider>
-    </Box>
+      </Stack>
+    </SidebarProvider>
   );
 }
 
