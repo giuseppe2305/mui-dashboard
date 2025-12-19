@@ -1,19 +1,30 @@
 import { Button, ButtonGroup } from "@mui/material";
+import type { ChildrenString } from "../types/ChildrenString";
+import { TimeRangeProvider } from "../contexts/TimeRangeContext";
+import { useTimeRangeContext } from "../contexts/useTimeRangeContext";
 
 function TimeRangeSelector() {
-  {
-    /* <ToggleButton value={"7days"}>
-          <ToggleButton value={"7days"}>7 days</ToggleButton>
-          <ToggleButton value={"30days"}>30 days</ToggleButton>
-          <ToggleButton value={"90days"}>90 days</ToggleButton>
-        </ToggleButton> */
-  }
   return (
-    <ButtonGroup>
-      <Button variant="contained">7 days</Button>
-      <Button>30 days</Button>
-      <Button>90 days</Button>
-    </ButtonGroup>
+    <TimeRangeProvider>
+      <ButtonGroup>
+        <TimeButton>7 days</TimeButton>
+        <TimeButton>30 days</TimeButton>
+        <TimeButton>90 days</TimeButton>
+      </ButtonGroup>
+    </TimeRangeProvider>
+  );
+}
+
+function TimeButton({ children }: ChildrenString) {
+  const { timeRange, setTimeRange } = useTimeRangeContext();
+
+  const value = children.replace(/ /g, "");
+  const active = value === timeRange;
+
+  return (
+    <Button onClick={() => setTimeRange(value)} variant={active ? "contained" : "outlined"}>
+      {children}
+    </Button>
   );
 }
 
