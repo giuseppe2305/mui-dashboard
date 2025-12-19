@@ -10,14 +10,22 @@ function ThemeSwitch() {
       variant="outlined"
       fullWidth
       sx={{
+        // Theme Label
         "& .MuiFormLabel-root": { color: "primary.contrastText" },
+
+        // Arrow Icon SVG
         "& .MuiInputBase-root svg": { color: "primary.contrastText" },
+
+        // Border
         "& .MuiInputBase-root .MuiOutlinedInput-notchedOutline": {
           borderColor: "primary.contrastText",
           borderWidth: 1,
         },
 
+        // Focus State Theme Label
         "& .Mui-focused.MuiFormLabel-root": { color: "primary.contrastText" },
+
+        // Focus State Border
         "& .Mui-focused.MuiInputBase-root .MuiOutlinedInput-notchedOutline": {
           borderColor: "primary.contrastText",
           borderWidth: 1,
