@@ -27,6 +27,7 @@ function Home() {
       component="main"
       sx={{
         overflowY: "auto",
+        backgroundColor: "background.default",
         pb: 6,
         ml: `${isSidebarOpen ? "unset" : `-${SIDEBAR_WIDTH}px`}`,
         transition: theme.transitions.create("margin", {

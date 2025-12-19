@@ -5,6 +5,7 @@ function SidebarBackgroundFix() {
   return (
     <Box
       sx={{
+        zIndex: -1,
         position: "absolute",
         top: 0,
         left: 0,
