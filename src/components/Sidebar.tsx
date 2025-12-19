@@ -1,4 +1,14 @@
-import { Drawer, Grid, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from "@mui/material";
+import {
+  Button,
+  Drawer,
+  Grid,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Typography,
+} from "@mui/material";
 
 import HomeIcon from "@mui/icons-material/Home";
 import ShowChart from "@mui/icons-material/ShowChart";
@@ -8,6 +18,7 @@ import Person from "@mui/icons-material/Person";
 import { ThemeSwitch } from "./ThemeSwitch";
 import { useSidebar } from "../contexts/useSidebar";
 import { SIDEBAR_WIDTH } from "../lib/constants";
+import { NavLink } from "react-router";
 
 function Sidebar() {
   const { isOpen } = useSidebar();
@@ -37,7 +48,7 @@ function Sidebar() {
         </Typography>
         <List sx={{ marginTop: 6 }}>
           <ListItem>
-            <ListItemButton>
+            <ListItemButton component={NavLink} to={"/"}>
               <ListItemIcon sx={{ color: "inherit" }}>
                 <HomeIcon />
               </ListItemIcon>
@@ -45,7 +56,7 @@ function Sidebar() {
             </ListItemButton>
           </ListItem>
           <ListItem>
-            <ListItemButton>
+            <ListItemButton component={NavLink} to={"/charts"}>
               <ListItemIcon sx={{ color: "inherit" }}>
                 <ShowChart />
               </ListItemIcon>
@@ -53,7 +64,7 @@ function Sidebar() {
             </ListItemButton>
           </ListItem>
           <ListItem>
-            <ListItemButton>
+            <ListItemButton component={NavLink} to={"/settings"}>
               <ListItemIcon sx={{ color: "inherit" }}>
                 <Settings />
               </ListItemIcon>
@@ -61,7 +72,7 @@ function Sidebar() {
             </ListItemButton>
           </ListItem>
           <ListItem>
-            <ListItemButton>
+            <ListItemButton component={NavLink} to={"/account"}>
               <ListItemIcon sx={{ color: "inherit" }}>
                 <Person />
               </ListItemIcon>
