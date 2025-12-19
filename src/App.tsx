@@ -10,7 +10,9 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import { SidebarProvider } from "./contexts/SidebarContext";
 import { SidebarBackgroundFix } from "./components/SidebarBackgroundPlaceholder";
 import { Sidebar } from "./components/Sidebar";
+
 import { Home } from "./components/Home";
+import { Charts } from "./components/Charts";
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
             <Sidebar />
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/charts" element={<Charts />} />
             </Routes>
           </Stack>
         </BrowserRouter>
