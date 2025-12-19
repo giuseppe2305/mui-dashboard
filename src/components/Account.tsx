@@ -1,5 +1,34 @@
+import { Button, Container, Grid, Stack, TextField, Typography } from "@mui/material";
+
 function Account() {
-  return <div>Account</div>;
+  return (
+    <Container maxWidth="xl" sx={{ py: 10 }}>
+      <Typography variant="h3">Account</Typography>
+      <Typography>Manage your account informations and update your passowords.</Typography>
+      <Grid container gap={4} justifyContent="space-between" sx={{ mt: 10, px: 10 }}>
+        <Grid sx={{ flexDirection: "column", display: "flex", gap: 4, maxWidth: 500 }} size={6}>
+          <Typography variant="h2">Change your password</Typography>
+          <TextField type="password" variant="standard" placeholder="Old Password" />
+          <TextField type="password" variant="standard" placeholder="New Password" />
+          <TextField type="password" variant="standard" placeholder="Repeat Password" />
+          <Stack sx={{ ml: "auto" }} direction="row">
+            <Button>Cancel</Button>
+            <Button variant="contained">Save</Button>
+          </Stack>
+        </Grid>
+        <Grid sx={{ flexDirection: "column", display: "flex", gap: 4, maxWidth: 500 }} size={6}>
+          <Typography variant="h2">Change your username</Typography>
+          <TextField type="email" variant="standard" placeholder="Email" />
+          <TextField type="password" variant="standard" placeholder="Password" />
+          <TextField variant="standard" placeholder="New Username" />
+          <Stack sx={{ ml: "auto" }} direction="row">
+            <Button>Cancel</Button>
+            <Button variant="contained">Save</Button>
+          </Stack>
+        </Grid>
+      </Grid>
+    </Container>
+  );
 }
 
 export { Account };
