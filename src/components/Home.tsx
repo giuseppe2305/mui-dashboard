@@ -13,7 +13,7 @@ import { EmailsDrawer } from "./EmailsDrawer";
 import { useState } from "react";
 import { useSidebar } from "../contexts/useSidebar";
 import { SIDEBAR_WIDTH } from "../lib/constants";
-import theme from "../lib/theme";
+import { useThemeContext } from "../contexts/useThemeContext";
 
 function Home() {
   const [isEmailOpen, setIsEmailOpen] = useState(false);
@@ -21,6 +21,8 @@ function Home() {
 
   const closeEmail = () => setIsEmailOpen(false);
   const openEmail = () => setIsEmailOpen(true);
+
+  const { theme } = useThemeContext();
 
   return (
     <Box
