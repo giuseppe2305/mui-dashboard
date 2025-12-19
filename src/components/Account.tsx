@@ -4,8 +4,8 @@ import { PageContainer } from "./PageContainer";
 function Account() {
   return (
     <PageContainer>
-      <Typography variant="h3">Account</Typography>
-      <Typography>Manage your account informations and update your passwords.</Typography>
+      <PageContainer.Title>Account</PageContainer.Title>
+      <PageContainer.Subtitle>Manage your account informations and update your passwords.</PageContainer.Subtitle>
       <Grid container gap={{ sm: 4, xl: 30 }} sx={{ mt: 10 }}>
         <Grid sx={{ flexDirection: "column", display: "flex", gap: 4, maxWidth: 500 }} size={{ sm: 12, xl: 6 }}>
           <Typography variant="h2">Change your password</Typography>

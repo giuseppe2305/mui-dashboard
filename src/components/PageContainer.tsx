@@ -1,5 +1,6 @@
-import { Container } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import type { ChildrenNode } from "../types/ChildrenNode";
+import type { ChildrenString } from "../types/ChildrenString";
 
 function PageContainer({ children }: ChildrenNode) {
   return (
@@ -8,5 +9,16 @@ function PageContainer({ children }: ChildrenNode) {
     </Container>
   );
 }
+
+function Title({ children }: ChildrenString) {
+  return <Typography variant="h3">{children}</Typography>;
+}
+
+function Subtitle({ children }: ChildrenString) {
+  return <Typography>{children}</Typography>;
+}
+
+PageContainer.Title = Title;
+PageContainer.Subtitle = Subtitle;
 
 export { PageContainer };
