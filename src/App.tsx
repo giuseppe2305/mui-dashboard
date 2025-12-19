@@ -7,11 +7,17 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import { Dashboard } from "./components/Dashboard";
 import theme from "./lib/theme";
 
+import { BrowserRouter, Route, Routes } from "react-router";
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline enableColorScheme />
-      <Dashboard />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
