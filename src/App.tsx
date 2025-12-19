@@ -3,8 +3,7 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
-import { CssBaseline, Stack, ThemeProvider } from "@mui/material";
-import theme from "./lib/theme";
+import { CssBaseline, Stack } from "@mui/material";
 
 import { BrowserRouter, Route, Routes } from "react-router";
 import { SidebarProvider } from "./contexts/SidebarContext";
@@ -15,10 +14,11 @@ import { Home } from "./components/Home";
 import { Charts } from "./components/Charts";
 import { Settings } from "./components/Settings";
 import { Account } from "./components/Account";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider>
       <CssBaseline enableColorScheme />
       <SidebarProvider>
         <BrowserRouter>
