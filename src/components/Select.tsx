@@ -5,10 +5,10 @@ interface Props {
   value: string;
   values: string[];
   onChange: (value: string) => void;
-  label?: string;
+  label: string;
 }
 
-function Select({ value, values, onChange, label = "Theme" }: Props) {
+function Select({ value, values, onChange, label }: Props) {
   const labelId = `${label.toLowerCase()}-select-label`;
   const id = `${label.toLowerCase()}-select`;
   return (
