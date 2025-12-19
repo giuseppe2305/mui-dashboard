@@ -1,6 +1,7 @@
 import { Mail, Notifications, Menu } from "@mui/icons-material";
 import { Box, Badge, Avatar, IconButton } from "@mui/material";
 import { useSidebar } from "../contexts/useSidebar";
+import { HEADBAR_HEIGHT } from "../lib/constants";
 
 interface Props {
   openEmail: () => void;
@@ -12,7 +13,7 @@ function HeaderBar({ openEmail }: Props) {
   return (
     <Box
       sx={{
-        py: 1,
+        height: HEADBAR_HEIGHT,
         px: 4,
         backgroundColor: "primary.main",
         color: "primary.contrastText",

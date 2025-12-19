@@ -16,7 +16,6 @@ function Sidebar() {
     <Drawer
       sx={{
         width: SIDEBAR_WIDTH,
-        flexShrink: 0,
 
         "& .MuiDrawer-paper": {
           width: SIDEBAR_WIDTH,
