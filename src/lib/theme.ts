@@ -30,32 +30,65 @@ const shared = {
   },
 };
 
-const theme = createTheme({
-  colorSchemes: {
-    light: {
-      palette: {
-        mode: "light",
-        primary: { main: "#0f62fe", contrastText: "#ffffff" },
-        secondary: { main: "#00a676", contrastText: "#ffffff" },
-        background: { default: "#f5f7fb", paper: "#ffffff" },
-        text: { primary: "#0b1b2b", secondary: "#415a6b" },
-        divider: "rgba(11,27,43,0.08)",
-      },
-    },
-    dark: {
-      palette: {
-        mode: "dark",
-        primary: { main: "#6ec6ff", contrastText: "#022b3a" },
-        secondary: { main: "#7bffb2", contrastText: "#002b20" },
-        background: { default: "#071022", paper: "#071a23" },
-        text: { primary: "#e6f7ff", secondary: "#bcd9e9" },
-        divider: "rgba(255,255,255,0.08)",
-      },
-    },
+export const palettes = {
+  blue: {
+    color: "#0f62fe",
+    textColor: "#ffffff",
   },
-  typography: shared.typography,
-  shape: shared.shape,
-  components: shared.components,
-});
+  red: {
+    color: "#d32f2f",
+    textColor: "#ffffff",
+  },
+  green: {
+    color: "#00a676",
+    textColor: "#ffffff",
+  },
+  purple: {
+    color: "#6a1b9a",
+    textColor: "#ffffff",
+  },
+  orange: {
+    color: "#a1661eff",
+    textColor: "#ffffff",
+  },
+  teal: {
+    color: "#00796b",
+    textColor: "#ffffff",
+  },
+};
 
-export default theme;
+export type colorsType = keyof typeof palettes;
+
+function makeTheme(color: colorsType) {
+  const { color: mainColor, textColor } = palettes[color];
+
+  return createTheme({
+    colorSchemes: {
+      light: {
+        palette: {
+          mode: "light",
+          primary: { main: mainColor, contrastText: textColor },
+          secondary: { main: "#00a676", contrastText: "#ffffff" },
+          background: { default: "#f5f7fb", paper: "#ffffff" },
+          text: { primary: "#0b1b2b", secondary: "#415a6b" },
+          divider: "rgba(11,27,43,0.08)",
+        },
+      },
+      dark: {
+        palette: {
+          mode: "dark",
+          primary: { main: mainColor, contrastText: textColor },
+          secondary: { main: "#7bffb2", contrastText: "#002b20" },
+          background: { default: "#071022", paper: "#071a23" },
+          text: { primary: "#e6f7ff", secondary: "#bcd9e9" },
+          divider: "rgba(255,255,255,0.08)",
+        },
+      },
+    },
+    typography: shared.typography,
+    shape: shared.shape,
+    components: shared.components,
+  });
+}
+
+export { makeTheme };
