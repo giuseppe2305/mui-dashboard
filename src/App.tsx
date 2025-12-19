@@ -16,8 +16,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline enableColorScheme />
-      <BrowserRouter>
-        <SidebarProvider>
+      <SidebarProvider>
+        <BrowserRouter>
           <Stack direction="row" sx={{ height: "100vh" }}>
             <SidebarBackgroundFix />
             <Sidebar />
@@ -25,8 +25,8 @@ function App() {
               <Route path="/" element={<Home />} />
             </Routes>
           </Stack>
-        </SidebarProvider>
-      </BrowserRouter>
+        </BrowserRouter>
+      </SidebarProvider>
     </ThemeProvider>
   );
 }
