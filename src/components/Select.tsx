@@ -4,11 +4,13 @@ import capitalizeWord from "../lib/functions/capitalizeWord";
 interface Props {
   value: string;
   values: string[];
-
   onChange: (value: string) => void;
+  label?: string;
 }
 
-function Select({ value, values, onChange }: Props) {
+function Select({ value, values, onChange, label = "Theme" }: Props) {
+  const labelId = `${label.toLowerCase()}-select-label`;
+  const id = `${label.toLowerCase()}-select`;
   return (
     <FormControl
       variant="outlined"
@@ -36,15 +38,15 @@ function Select({ value, values, onChange }: Props) {
         },
       }}
     >
-      <InputLabel id="theme-select-label" sx={{ color: "primary.contrastText" }}>
-        Theme
+      <InputLabel id={labelId} sx={{ color: "primary.contrastText" }}>
+        {label}
       </InputLabel>
       <SelectMUI
-        labelId="theme-select-label"
-        id="theme-select"
+        labelId={labelId}
+        id={id}
         value={value}
-        label="Theme"
-        onChange={(event) => onChange(event.target.value)}
+        label={label}
+        onChange={(event) => onChange(event.target.value as string)}
         size="small"
         sx={{
           color: "primary.contrastText",
@@ -52,7 +54,9 @@ function Select({ value, values, onChange }: Props) {
         }}
       >
         {values.map((v) => (
-          <MenuItem value={v}>{capitalizeWord(v)}</MenuItem>
+          <MenuItem key={v} value={v}>
+            {capitalizeWord(v)}
+          </MenuItem>
         ))}
       </SelectMUI>
     </FormControl>
