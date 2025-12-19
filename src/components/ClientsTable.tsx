@@ -53,10 +53,16 @@ function ClientsTable() {
               </TableRow>
             ))}
           </TableBody>
-          <TableFooter>
+          <TableFooter sx={{ backgroundColor: "primary.main" }}>
             <TableRow>
               <TablePagination
                 rowsPerPageOptions={[5, 10, 25, { label: "All", value: -1 }]}
+                sx={{
+                  borderBottom: 0,
+                  color: "primary.contrastText",
+                  "& svg": { color: "primary.contrastText" },
+                  "& .Mui-disabled svg": { color: "primary.light" },
+                }}
                 count={5}
                 rowsPerPage={5}
                 page={0}
