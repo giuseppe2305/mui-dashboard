@@ -1,10 +1,11 @@
-import { Button, Container, Grid, Stack, TextField, Typography } from "@mui/material";
+import { Button, Grid, Stack, TextField, Typography } from "@mui/material";
+import { PageContainer } from "./PageContainer";
 
 function Account() {
   return (
-    <Container maxWidth="xl" sx={{ py: 10 }}>
+    <PageContainer>
       <Typography variant="h3">Account</Typography>
-      <Typography>Manage your account informations and update your passowords.</Typography>
+      <Typography>Manage your account informations and update your passwords.</Typography>
       <Grid container gap={{ sm: 4, xl: 30 }} sx={{ mt: 10 }}>
         <Grid sx={{ flexDirection: "column", display: "flex", gap: 4, maxWidth: 500 }} size={{ sm: 12, xl: 6 }}>
           <Typography variant="h2">Change your password</Typography>
@@ -27,7 +28,7 @@ function Account() {
           </Stack>
         </Grid>
       </Grid>
-    </Container>
+    </PageContainer>
   );
 }
 
