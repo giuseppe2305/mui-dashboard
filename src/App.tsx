@@ -7,7 +7,7 @@ import { CssBaseline, Stack } from "@mui/material";
 
 import { BrowserRouter, Route, Routes } from "react-router";
 import { SidebarProvider } from "./contexts/SidebarContext";
-import { SidebarBackgroundFix } from "./components/SidebarBackgroundPlaceholder";
+import { SidebarBackgroundFix } from "./components/SidebarBackgroundFix";
 import { Sidebar } from "./components/Sidebar";
 
 import { Home } from "./components/Home";
