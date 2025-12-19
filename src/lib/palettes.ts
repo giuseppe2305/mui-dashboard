@@ -16,12 +16,16 @@ export const palettes = {
     textColor: "#ffffff",
   },
   orange: {
-    color: "#a1661eff",
-    textColor: "#ffffff",
+    color: "#ff8c00ff",
+    textColor: "#000",
   },
   teal: {
     color: "#00796b",
     textColor: "#ffffff",
+  },
+  fucsia: {
+    color: "#ff00eaff",
+    textColor: "#000",
   },
 };
 
