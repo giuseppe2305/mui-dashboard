@@ -12,6 +12,9 @@ function ThemeSwitch() {
       sx={{
         "& svg": { color: "primary.contrastText" },
         "& .MuiOutlinedInput-notchedOutline": { borderColor: "primary.contrastText" },
+
+        "& .Mui-focused": { color: "primary.contrastText" },
+        "& .Mui-focused .MuiOutlinedInput-notchedOutline": { borderColor: "primary.contrastText", borderWidth: 1 },
       }}
     >
       <InputLabel id="theme-select-label" sx={{ color: "primary.contrastText" }}>
