@@ -8,7 +8,14 @@ function ThemeSwitch() {
   if (!mode) {
     return null;
   }
-  return <Select value={mode} values={["light", "dark", "system"]} onChange={(mode) => setMode(mode as themes)} />;
+  return (
+    <Select
+      label="Theme"
+      value={mode}
+      values={["light", "dark", "system"]}
+      onChange={(mode) => setMode(mode as themes)}
+    />
+  );
 }
 
 export { ThemeSwitch };
