@@ -13,6 +13,8 @@ import { Sidebar } from "./components/Sidebar";
 
 import { Home } from "./components/Home";
 import { Charts } from "./components/Charts";
+import { Settings } from "./components/Settings";
+import { Account } from "./components/Account";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/charts" element={<Charts />} />
+              <Route path="/settings" element={<Settings />} />
+              <Route path="/account" element={<Account />} />
             </Routes>
           </Stack>
         </BrowserRouter>
