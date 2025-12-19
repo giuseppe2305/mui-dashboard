@@ -10,11 +10,18 @@ function ThemeSwitch() {
       variant="outlined"
       fullWidth
       sx={{
-        "& svg": { color: "primary.contrastText" },
-        "& .MuiOutlinedInput-notchedOutline": { borderColor: "primary.contrastText" },
+        "& .MuiFormLabel-root": { color: "primary.contrastText" },
+        "& .MuiInputBase-root svg": { color: "primary.contrastText" },
+        "& .MuiInputBase-root .MuiOutlinedInput-notchedOutline": {
+          borderColor: "primary.contrastText",
+          borderWidth: 1,
+        },
 
-        "& .Mui-focused": { color: "primary.contrastText" },
-        "& .Mui-focused .MuiOutlinedInput-notchedOutline": { borderColor: "primary.contrastText", borderWidth: 1 },
+        "& .Mui-focused.MuiFormLabel-root": { color: "primary.contrastText" },
+        "& .Mui-focused.MuiInputBase-root .MuiOutlinedInput-notchedOutline": {
+          borderColor: "primary.contrastText",
+          borderWidth: 1,
+        },
       }}
     >
       <InputLabel id="theme-select-label" sx={{ color: "primary.contrastText" }}>
