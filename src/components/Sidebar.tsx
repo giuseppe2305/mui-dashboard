@@ -1,14 +1,4 @@
-import {
-  Button,
-  Drawer,
-  Grid,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  Typography,
-} from "@mui/material";
+import { Drawer, Grid, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from "@mui/material";
 
 import HomeIcon from "@mui/icons-material/Home";
 import ShowChart from "@mui/icons-material/ShowChart";
@@ -48,7 +38,7 @@ function Sidebar() {
         </Typography>
         <List sx={{ marginTop: 6 }}>
           <ListItem>
-            <ListItemButton component={NavLink} to={"/"}>
+            <ListItemButton component={NavLink} to={"/"} sx={{ "&.active": { backgroundColor: "primary.light" } }}>
               <ListItemIcon sx={{ color: "inherit" }}>
                 <HomeIcon />
               </ListItemIcon>
@@ -56,7 +46,11 @@ function Sidebar() {
             </ListItemButton>
           </ListItem>
           <ListItem>
-            <ListItemButton component={NavLink} to={"/charts"}>
+            <ListItemButton
+              component={NavLink}
+              to={"/charts"}
+              sx={{ "&.active": { backgroundColor: "primary.light" } }}
+            >
               <ListItemIcon sx={{ color: "inherit" }}>
                 <ShowChart />
               </ListItemIcon>
@@ -64,7 +58,11 @@ function Sidebar() {
             </ListItemButton>
           </ListItem>
           <ListItem>
-            <ListItemButton component={NavLink} to={"/settings"}>
+            <ListItemButton
+              component={NavLink}
+              to={"/settings"}
+              sx={{ "&.active": { backgroundColor: "primary.light" } }}
+            >
               <ListItemIcon sx={{ color: "inherit" }}>
                 <Settings />
               </ListItemIcon>
@@ -72,7 +70,11 @@ function Sidebar() {
             </ListItemButton>
           </ListItem>
           <ListItem>
-            <ListItemButton component={NavLink} to={"/account"}>
+            <ListItemButton
+              component={NavLink}
+              to={"/account"}
+              sx={{ "&.active": { backgroundColor: "primary.light" } }}
+            >
               <ListItemIcon sx={{ color: "inherit" }}>
                 <Person />
               </ListItemIcon>
