@@ -8,9 +8,8 @@ import {
   TableBody,
   Grid,
   Typography,
-  Pagination,
-  Stack,
-  Divider,
+  TableFooter,
+  TablePagination,
 } from "@mui/material";
 import { clients } from "../mock/clients";
 
@@ -54,31 +53,25 @@ function ClientsTable() {
               </TableRow>
             ))}
           </TableBody>
+          <TableFooter>
+            <TableRow>
+              <TablePagination
+                rowsPerPageOptions={[5, 10, 25, { label: "All", value: -1 }]}
+                count={5}
+                rowsPerPage={5}
+                page={0}
+                onPageChange={() => {}}
+                slotProps={{
+                  select: {
+                    inputProps: {
+                      "aria-label": "rows per page",
+                    },
+                  },
+                }}
+              />
+            </TableRow>
+          </TableFooter>
         </Table>
-        <Divider />
-        <Stack
-          sx={{
-            width: "100%",
-            alignItems: "center",
-            justifyContent: "space-between",
-            flexDirection: "row",
-            py: 1,
-            px: 4,
-            backgroundColor: "primary.light",
-            color: "primary.contrastText",
-          }}
-        >
-          <Typography>Page 1 of 10</Typography>
-          <Pagination
-            sx={{
-              "& .MuiPaginationItem-root": {
-                color: "primary.contrastText",
-              },
-            }}
-            color="primary"
-            count={10}
-          />
-        </Stack>
       </TableContainer>
     </Grid>
   );
