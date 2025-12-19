@@ -5,6 +5,7 @@ import { useSidebar } from "../contexts/useSidebar";
 import { SIDEBAR_WIDTH } from "../lib/constants";
 import { NavLink } from "react-router";
 import { routes } from "../lib/routes";
+import { ColorSwitch } from "./ColorSwitch";
 
 function Sidebar() {
   const { isOpen } = useSidebar();
@@ -46,6 +47,10 @@ function Sidebar() {
 
           <ListItem sx={{ mt: 6 }}>
             <ThemeSwitch />
+          </ListItem>
+
+          <ListItem>
+            <ColorSwitch />
           </ListItem>
         </List>
       </Grid>
