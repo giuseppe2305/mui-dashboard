@@ -1,4 +1,5 @@
 import { FormControl, InputLabel, MenuItem, Select as SelectMUI } from "@mui/material";
+import capitalizeWord from "../lib/functions/capitalizeWord";
 
 interface Props {
   value: string;
@@ -51,7 +52,7 @@ function Select({ value, values, onChange }: Props) {
         }}
       >
         {values.map((v) => (
-          <MenuItem value={v}>{v}</MenuItem>
+          <MenuItem value={v}>{capitalizeWord(v)}</MenuItem>
         ))}
       </SelectMUI>
     </FormControl>
