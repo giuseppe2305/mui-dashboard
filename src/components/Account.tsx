@@ -5,8 +5,8 @@ function Account() {
     <Container maxWidth="xl" sx={{ py: 10 }}>
       <Typography variant="h3">Account</Typography>
       <Typography>Manage your account informations and update your passowords.</Typography>
-      <Grid container gap={4} justifyContent="space-between" sx={{ mt: 10, px: 10 }}>
-        <Grid sx={{ flexDirection: "column", display: "flex", gap: 4, maxWidth: 500 }} size={6}>
+      <Grid container gap={{ sm: 4, xl: 30 }} sx={{ mt: 10 }}>
+        <Grid sx={{ flexDirection: "column", display: "flex", gap: 4, maxWidth: 500 }} size={{ sm: 12, xl: 6 }}>
           <Typography variant="h2">Change your password</Typography>
           <TextField type="password" variant="standard" placeholder="Old Password" />
           <TextField type="password" variant="standard" placeholder="New Password" />
@@ -16,7 +16,7 @@ function Account() {
             <Button variant="contained">Save</Button>
           </Stack>
         </Grid>
-        <Grid sx={{ flexDirection: "column", display: "flex", gap: 4, maxWidth: 500 }} size={6}>
+        <Grid sx={{ flexDirection: "column", display: "flex", gap: 4, maxWidth: 500 }} size={{ sm: 12, xl: 6 }}>
           <Typography variant="h2">Change your username</Typography>
           <TextField type="email" variant="standard" placeholder="Email" />
           <TextField type="password" variant="standard" placeholder="Password" />
