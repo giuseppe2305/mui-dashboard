@@ -34,7 +34,7 @@ function Sidebar() {
         </Typography>
         <List sx={{ marginTop: 6 }}>
           {routes.map((r) => (
-            <ListItem>
+            <ListItem key={r.path}>
               <ListItemButton component={NavLink} to={r.path} sx={{ "&.active": { backgroundColor: "primary.light" } }}>
                 <ListItemIcon sx={{ color: "inherit" }}>
                   <r.icon />
