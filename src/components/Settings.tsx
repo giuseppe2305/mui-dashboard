@@ -9,7 +9,7 @@ function Settings() {
       <PageContainer.Title>Settings</PageContainer.Title>
       <PageContainer.Subtitle>Manage settings of the app and adjust your own preferences</PageContainer.Subtitle>
 
-      <Stack sx={{ backgroundColor: "primary.main" }}>
+      <Stack sx={{ backgroundColor: "primary.main", p: 3 }}>
         <ThemeSwitch />
         <ColorSwitch />
       </Stack>
