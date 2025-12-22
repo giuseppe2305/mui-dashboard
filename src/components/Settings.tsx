@@ -9,7 +9,7 @@ function Settings() {
       <PageContainer.Title>Settings</PageContainer.Title>
       <PageContainer.Subtitle>Manage settings of the app and adjust your own preferences</PageContainer.Subtitle>
 
-      <Stack gap={4} sx={{ backgroundColor: "primary.main", p: 3 }}>
+      <Stack gap={4} sx={{ backgroundColor: "primary.main", p: 3 }} maxWidth={400}>
         <Typography variant="h2" color="primary.contrastText">
           Theme & Colors
         </Typography>
