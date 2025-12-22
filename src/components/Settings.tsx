@@ -1,3 +1,4 @@
+import { Stack } from "@mui/material";
 import { ColorSwitch } from "./ColorSwitch";
 import { PageContainer } from "./PageContainer";
 import { ThemeSwitch } from "./ThemeSwitch";
@@ -8,8 +9,10 @@ function Settings() {
       <PageContainer.Title>Settings</PageContainer.Title>
       <PageContainer.Subtitle>Manage settings of the app and adjust your own preferences</PageContainer.Subtitle>
 
-      <ThemeSwitch />
-      <ColorSwitch />
+      <Stack sx={{ backgroundColor: "primary.main" }}>
+        <ThemeSwitch />
+        <ColorSwitch />
+      </Stack>
     </PageContainer>
   );
 }
