@@ -1,3 +1,4 @@
+import { ColorSwitch } from "./ColorSwitch";
 import { PageContainer } from "./PageContainer";
 import { ThemeSwitch } from "./ThemeSwitch";
 
@@ -8,6 +9,7 @@ function Settings() {
       <PageContainer.Subtitle>Manage settings of the app and adjust your own preferences</PageContainer.Subtitle>
 
       <ThemeSwitch />
+      <ColorSwitch />
     </PageContainer>
   );
 }
