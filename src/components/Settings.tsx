@@ -10,7 +10,7 @@ function Settings() {
       <PageContainer.Subtitle>Manage settings of the app and adjust your own preferences</PageContainer.Subtitle>
 
       <Stack gap={4} sx={{ backgroundColor: "primary.main", p: 3 }}>
-        <Typography>Theme & Colors</Typography>
+        <Typography color="primary.contrastText">Theme & Colors</Typography>
         <ThemeSwitch />
         <ColorSwitch />
       </Stack>
